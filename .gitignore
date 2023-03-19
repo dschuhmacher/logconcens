@@ -1,3 +1,6 @@
+# extra files
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history
@@ -37,3 +40,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# .o files
+src/*o
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib

@@ -1,0 +1,11 @@
+importFrom("grDevices", "dev.new", "grey")
+importFrom("graphics", "abline", "axis", "box", "lines", "par", "plot", "points", "polygon", "rug", "segments")
+importFrom("stats", "IQR", "uniroot")
+importFrom("utils", "tail")
+
+useDynLib(logconcens, .registration = TRUE, .fixes = "C_")
+
+export("logcon", "logconcure", "lc.control", "loglike", "cure.profile", "plotint")
+S3method("plot", "lcdensity")
+S3method("summary", "lcdensity")
+S3method("print", "lcdensity")
