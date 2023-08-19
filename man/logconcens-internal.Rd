@@ -4,9 +4,11 @@
 \alias{J10}
 \alias{clc.fixdom}
 \alias{subdivisor}
+\alias{phidivisor}
 %
 \title{Internal logconcens Functions}
 \description{Internal logconcens functions, usually not to be called by the user.}
+\details{These functions are not exported any more and this overview remains in place purely for information.}
 \usage{
 GetWeights(preweights,tplus, p0, xindex, rightinf, phi, phislr, needsl)
 J00(x, y, v = 1)

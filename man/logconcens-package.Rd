@@ -6,17 +6,9 @@
 Maximum Likelihood Estimation of a Log-Concave Density Based on Censored Data 
 }
 \description{
-Based on independent intervals \eqn{X_i = [L_i,R_i]}, where \eqn{-\infty < L_i \leq R_i \leq \infty}{-Inf < L_i <= R_i <= Inf}, compute the maximum likelihood estimator of a (sub)probability density under the assumption that it is log-concave. For further information see Duembgen, Rufibach, and Schuhmacher (2013, preprint).
+Based on independent intervals \eqn{X_i = [L_i,R_i]}, where \eqn{-\infty < L_i \leq R_i \leq \infty}{-Inf < L_i <= R_i <= Inf}, compute the maximum likelihood estimator of a (sub)probability density under the assumption that it is log-concave. For further information see Duembgen, Rufibach, and Schuhmacher (2013).
 }
 \details{
-\tabular{ll}{
-Package: \tab logconcens\cr
-Type: \tab Package\cr
-Version: \tab 0.16-4\cr
-Date: \tab 2013-12-13\cr
-License: \tab GPL (>=2)\cr
-LazyLoad: \tab yes\cr
-}
 The main function is \code{\link{logcon}}, which offers computation of the MLE for many types of censored and also exact data. Various parameters can be set that allow for fine control of the underlying EM algorithm in \dQuote{difficult} situations. An object of type \code{lcdensity} is returned, for which \code{\link[=plot.lcdensity]{plot}}, \code{\link[=print.lcdensity]{print}}, and \code{\link[=summary.lcdensity]{summary}} methods are available. There is also a function \code{\link{loglike}} for computing the log-likelihood of a \code{lcdensity} object.  
 }
 \author{

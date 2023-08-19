@@ -1,8 +1,8 @@
 Package: logconcens
 Type: Package
 Title: Maximum Likelihood Estimation of a Log-Concave Density Based on Censored Data
-Version: 0.17-2
-Date: 2023-03-19
+Version: 0.17-3
+Date: 2023-08-19
 Author: Dominic Schuhmacher <dominic.schuhmacher@mathematik.uni-goettingen.de>, Kaspar Rufibach <kaspar.rufibach@gmail.com>, Lutz Duembgen <duembgen@stat.unibe.ch>
 Maintainer: Dominic Schuhmacher <dominic.schuhmacher@mathematik.uni-goettingen.de>
 Depends: R (>= 2.15.0)
