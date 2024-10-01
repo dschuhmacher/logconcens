@@ -363,20 +363,20 @@ void localmle_slope(State *state)
   rs.p0 = state->p0;
   rn = state->rn;
 
-  rs.knotlist = (int *) Calloc((long) rn, int);   /* "R-function", more flexible than R_alloc */
-  rs.rx = (double *) Calloc((long) rn, double);   
-  rs.rdx = (double *) Calloc((long) rn, double);
-  rs.rw = (double *) Calloc((long) rn, double); 
-  rs.rw_slr = (double *) Calloc((long) 1, double); /* hmm, this seems necessary */ 
-  rs.rphi_cur = (double *) Calloc((long) rn, double);
-  rs.rphi_cur_slr = (double *) Calloc((long) 1, double);
-  rs.rphi_new = (double *) Calloc((long) rn, double);
-  /* rs.rphi_new_slr = (double *) Calloc((long) 1, double); */
-  rs.rgrad = (double *) Calloc((long) rn, double);
-  rs.rmhess_diag = (double *) Calloc((long) rn, double);
-  rs.rmhess_sub = (double *) Calloc((long) rn, double);
-  rs.temp = (double *) Calloc((long) rn, double); 
-  rs.b = (double *) Calloc((long) rn, double);
+  rs.knotlist = (int *) R_Calloc((long) rn, int);   /* "R-function", more flexible than R_alloc */
+  rs.rx = (double *) R_Calloc((long) rn, double);   
+  rs.rdx = (double *) R_Calloc((long) rn, double);
+  rs.rw = (double *) R_Calloc((long) rn, double); 
+  rs.rw_slr = (double *) R_Calloc((long) 1, double); /* hmm, this seems necessary */ 
+  rs.rphi_cur = (double *) R_Calloc((long) rn, double);
+  rs.rphi_cur_slr = (double *) R_Calloc((long) 1, double);
+  rs.rphi_new = (double *) R_Calloc((long) rn, double);
+  /* rs.rphi_new_slr = (double *) R_Calloc((long) 1, double); */
+  rs.rgrad = (double *) R_Calloc((long) rn, double);
+  rs.rmhess_diag = (double *) R_Calloc((long) rn, double);
+  rs.rmhess_sub = (double *) R_Calloc((long) rn, double);
+  rs.temp = (double *) R_Calloc((long) rn, double); 
+  rs.b = (double *) R_Calloc((long) rn, double);
   
   LocalReduce_slope(state, &rs);
     /* initializes reduced state based on state; more precisely: 
@@ -444,20 +444,20 @@ void localmle_slope(State *state)
 
   state->L = rs.L;
 
-  Free(rs.knotlist);    /* the R-version of free */
-  Free(rs.rx); 
-  Free(rs.rdx);
-  Free(rs.rw);
-  Free(rs.rw_slr);
-  Free(rs.rphi_cur);
-  Free(rs.rphi_cur_slr);
-  Free(rs.rphi_new);
-  /*  Free(rs.rphi_new_slr); */
-  Free(rs.rgrad);
-  Free(rs.rmhess_diag);
-  Free(rs.rmhess_sub);
-  Free(rs.temp);
-  Free(rs.b);
+  R_Free(rs.knotlist);    /* the R-version of free */
+  R_Free(rs.rx); 
+  R_Free(rs.rdx);
+  R_Free(rs.rw);
+  R_Free(rs.rw_slr);
+  R_Free(rs.rphi_cur);
+  R_Free(rs.rphi_cur_slr);
+  R_Free(rs.rphi_new);
+  /*  R_Free(rs.rphi_new_slr); */
+  R_Free(rs.rgrad);
+  R_Free(rs.rmhess_diag);
+  R_Free(rs.rmhess_sub);
+  R_Free(rs.temp);
+  R_Free(rs.b);
 }
 
 
